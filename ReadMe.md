@@ -2,7 +2,7 @@
 
 Version 2.7  
 March 7, 2010  
-Copyright 2009 - 2010 by Jamal Mazrui  
+Copyright 2009 - 2015 by Jamal Mazrui  
 GNU Lesser General Public License (LGPL)
 
 McTwit, a Windows desktop client for Twitter -- designed for accessible and efficient use from the keyboard -- is a retired software project of mine due to changes in the Twitter security API that would have required extensive code changes.  The program no longer works.  In the spirit of open source software, however, I am publishing the last version, McTwit 2.7 (mainly written in Python), in case any of its code or ideas benefit projects by other developers.
