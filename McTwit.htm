@@ -1,0 +1,2392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 25 March 2009), see www.w3.org">
+
+  <title>McTwit</title>
+</head>
+
+<body>
+  Version 2.7<br>
+  March 7, 2010<br>
+  Copyright 2009 - 2010 by Jamal Mazrui<br>
+  GNU Lesser General Public License (LGPL)
+
+  <h1>Contents</h1>
+
+  <ul>
+    <li><a href="#A1">Description</a></li>
+
+    <li><a href="#A2">Installation</a></li>
+
+    <li><a href="#A3">Overview</a></li>
+
+    <li><a href="#A4">Quick Start</a></li>
+
+    <li><a href="#A5">Getting Messages</a></li>
+
+    <li><a href="#A6">Sending Messages</a></li>
+
+    <li><a href="#A7">Managing Users</a></li>
+
+    <li><a href="#A8">Navigating Items</a></li>
+
+    <li><a href="#A9">Miscellaneous Commands</a></li>
+
+    <li><a href="#A10">Handy Utilities</a></li>
+
+    <li><a href="#A11">Summary of Commands</a></li>
+
+    <li><a href="#A12">Summary of Configuration Settings</a></li>
+
+    <li><a href="#A13">Usage Tips</a></li>
+
+    <li><a href="#A14">Other Help Resources</a></li>
+
+    <li><a href="#A15">Development Notes</a></li>
+
+    <li><a href="#A16">Change Log</a></li>
+
+    <li><a href="#A17">MT Client</a></li>
+
+    <li><a href="#A18">twyt Twyt - A Twitter client for the easily
+    distracted</a></li>
+
+    <li><a href="#A19">twyt - Command line twitter client</a></li>
+
+    <li><a href="#A20">Usage: mctwit COMMAND [options] [args]</a></li>
+
+    <li><a href="#A21">Bits of the twitter API that have been
+    implemented and bits that need implementing in twitter.py</a></li>
+
+    <li><a href="#A22">How to install twyt</a></li>
+
+    <li><a href="#A23">How to use the twyt Python module</a></li>
+
+    <li><a href="#A24">Help on module twyt.twitter in twyt:</a></li>
+
+    <li><a href="#A25">Blog of Andrew Price</a></li>
+
+    <li><a href="#A26">Twyt Licence</a></li>
+  </ul>
+
+  <h1><a name="A1">Description</a></h1>
+
+  <p><a name="A1">McTwit is a free, open source desktop client for
+  Twitter.com, a popular social networking site. The program is
+  designed for productivity by keyboard users. Additionally, if the
+  JAWS, System Access, or Window-Eyes screen reader is active, some
+  information is conveyed efficiently through direct speech messages.
+  Such messages are also displayed on the status line for visual
+  users.</a></p>
+
+  <p>McTwit works on almost any version of Windows, including 64-bit
+  Vista. Its use of standard controls tends to maximize accessibility.
+  Programmed in a cross-platform language, the source code is also
+  relatively easy for interested developers to port to other operating
+  systems. A command-line version of McTwit is included in the
+  distribution, as well as the more powerful GUI version.</p>
+
+  <p>Twitter is being used to get bulletins about public or company
+  news with links to web pages for more information. People ask quick
+  questions or express informal opinions on Twitter that they would not
+  do by email. Direct, private messages may also be exchanged.</p>
+
+  <p>McTwit&#39;s flexible, direct access to Twitter features makes it
+  convenient to explore and communicate interactively. You can select a
+  user either by pointing to a list item or entering a screen name. Get
+  a list of someone&#39;s tweets, followers, or leaders with a single
+  keystroke. Go to a related URL, subscribe to tweets, post a public
+  reply, or send a private message. McTwit offers full access to a
+  leading networking technology!</p>
+
+  <h1><a name="A2">Installation</a></h1>
+
+  <p><a name="A2">The installer for McTwit is called mtsetup.exe. The
+  default location for the program is<br>
+  C:\Program Files\McTwit</a></p>
+
+  <p>The installer also creates a desktop shortcut and a program group
+  within the Windows Start Menu, with options to launch the program,
+  read documentation, upgrade, or uninstall. At the end of the
+  installation process, there are checkboxes to install optional JAWS
+  or Window-Eyes scripts that offer some enhancements created by script
+  developers for these screen readers. Among other things, the scripts
+  offer email-like alternatives to McTwit commands, e.g., Control+N for
+  a new tweet, Control+R for a direct reply, or Control+Shift+R for a
+  public reply. For more information, use the ways that each screen
+  reader provides script help, or contact the script authors.</p>
+
+  <p>The default shortcutkey for McTwit is Alt+Control+M. If the
+  program is already running when an attempt to launch it is made, the
+  existing window is activated, rather than opening another copy.
+  McTwit may also be opened by entering its name in the Windows
+  Start/Run dialog.</p>
+
+  <h1><a name="A3">Overview</a></h1>
+
+  <p><a name="A3">The McTwit program is a single, dynamic dialog
+  divided into three sections from top to bottom: (1)a labeled listbox,
+  (2) a labeled, multi-line, read-only edit box, and (3) many buttons,
+  spanning the alphabet in three rows. The title of the dialog is
+  &quot;McTwit - &quot; and the screen name of the Twitter account
+  holder.</a></p>
+
+  <p>The listbox shows multiple message or user items from Twitter. Its
+  label, located to the left, indicates the selected user and item
+  type. The edit box -- also called the viewing area -- shows
+  additional information about the current item in the list, e.g., the
+  time of a message and the full name of the user who posted it. Each
+  button performs an action, often to fill the list with a particular
+  type of item.</p>
+
+  <p>All controls in the dialog may be accessed with a unique, mnemonic
+  keystroke -- generally an Alt+Letter combination. For example, Alt+I
+  focuses on items in the list, Alt+V focuses on the viewing area, and
+  Alt+N invokes the New button, which filles the list with new messages
+  by those you are following. This button is also the default, so it
+  can be invoked by pressing Enter unless another button has focus.
+  Buttons after New are in an alphabetical sequence until the Help and
+  Close buttons at the end. The Close button, or Escape key, prompts
+  for confirmation, whereas Alt+F4 closes McTwit immediately.</p>
+
+  <p>The dialog offers numerous choices, yet they are aided by online
+  help, and may be memorized as needed. Since a button in a standard
+  Windows dialog may be invoked with a combination of Alt and the
+  initial character of its label, McTwit tries to create mnemonics with
+  the initial characters of commands. Some of them are unconventional,
+  e.g., beginning with a number or punctuation mark, because all
+  letters of the alphabet are used. If a key combination is memorable,
+  however, it serves its purpose. To aid learning, a description of
+  each control is available on the status line when the control has
+  focus. screen readers have a hotkey to read the status line (e.g.,
+  Insert+PageDown in JAWS and System Access, or Control+Insert+S in
+  Window-Eyes). If you are keeping current with Twitter, McTwit
+  commands tend to be remembered through regular use.</p>
+
+  <p>Several commands operate in relation to a particular user, which
+  McTwit calls the &quot;selected user.&quot; If no items are contained
+  in the list, McTwit considers the selected user to be the active
+  account, which has a display name of &quot;My.&quot; Otherwise, the
+  selected user is obtained from the currently selected item in the
+  list. If the type of item is a message, the selected user is the
+  sender of the message. To re-establish yourself as the selected user,
+  press Alt+0 for the 0items command, which clears the list. To specify
+  a selected user by typing a scree name rather than pointing to a list
+  item, press Alt+1 for the 1other command, which prompts you for the
+  other user to be referenced by subsequent commands. This setting
+  takes precedence over a user referenced in a list item, so should be
+  cleared to a blank value when no longer needed.</p>
+
+  <p>When a command is invoked to fill the list with items of a
+  particular type, McTwit says the number of items it received from
+  Twitter -- or says &quot;Error&quot; if there was a problem. This is
+  an example of a direct speech message, which is also presented
+  visually on the status line. In general, when a command is invoked,
+  McTwit clears the status line and writes the name of the command
+  there. Then, when subsequent speech messages are given over the
+  course of the command, their text is appended to the status line.</p>
+
+  <p>In some cases, the goal of a command is not to fill the list or
+  edit box with information. Commands that send messages are in this
+  category. In such cases, McTwit says &quot;Done!&quot; if Twitter
+  indicates a valid result. Otherwise, McTwit conveys error
+  information.</p>
+
+  <h1><a name="A4">Quick Start</a></h1>
+
+  <p><a name="A4">Create a Twitter account by using your web browser to
+  open the site<br></a><a href=
+  "http://twitter.com">http://twitter.com</a></p>
+
+  <p>Launch McTwit from your desktop or via Alt+Control+M. Enter your
+  screen name and password.</p>
+
+  <p>Press Alt+N or Enter (for the default button) to get public
+  messages (also called &quot;tweets&quot;) by people you are
+  following. Press Alt+T to post a tweet yourself. Press Alt+D to get
+  private, direct messages, or Alt+W to send one. Tab to the viewing
+  area to get additional information about the current item in the
+  list. Press Alt+H to review this documentation at any time, or to
+  examine a command summary in the viewing area. A summary of the
+  command with focus is shown on the status line.</p>
+
+  <h1><a name="A5">Getting Messages</a></h1>
+
+  <p><a name="A5">The New command, Alt+N, gets tweets by you or your
+  &quot;leaders&quot; -- the McTwit term for users whom you are
+  following. The Replies command, Alt+R, gets tweets that reference
+  your screen name preceded by the @ sign -- a Twitter convention for
+  replying publicly to someone, or publicly mentioning that person. The
+  Direct command, Alt+D, gets direct messages sent privately to
+  you.</a></p>
+
+  <p>The ,bine command, Alt+Comma, combines New, Reply, and Direct
+  messages in a single list. McTwit tracks the time stamps of such
+  messages seperately, so you can get them again in each category with
+  the individual buttons.</p>
+
+  <p>Combined messages may also be retrieved automatically. The .auto
+  command, Alt+Period, prompts for a time period in minutes for this to
+  occur. The default is 0, meaning no automatic retrieval. As a
+  protection against losing items of interest in the list, auto
+  retrieval does not occur if the list is filled with items besides
+  combined messages. To ensure it happens, press Alt+0 to clear the
+  list. When combined messages are automatically added to the list,
+  McTwit plays a chime sound to notify you. When navigating through the
+  list of combined messages, the type of the current item is shown on
+  the status line.</p>
+
+  <p>The Sent command, Alt+S, gets direct messages that you have sent.
+  The Messages command, Alt+M, gets tweets by the selected user. The
+  \cache command, Alt+Backslash, gets favorite messages of the selected
+  user.</p>
+
+  <p>The Public command, Alt+P, gets messages from the &quot;public
+  timeline&quot; -- recent tweets posted by anyone with a custom
+  profile image. The 9rewind command, Alt+9, gets a chain of reply
+  messages, starting with the current one. McTwit keeps looking for a
+  prior message that is referenced, thus enabling you to read a
+  conversation thread.</p>
+
+  <h1><a name="A6">Sending Messages</a></h1>
+
+  <p><a name="A6">The Tweet command, Alt+T, posts a public message by
+  you, which is also called a &quot;tweet&quot; or &quot;updating your
+  status.&quot; The 2tweet command, Alt+2, posts a public reply to the
+  selected user. The 3tweet command, Alt+3, retweets the selected
+  message. The Write command, Alt+W, sends a direct message to the
+  selected user. As you type a message, McTwit updates the status line
+  with the position of the cursor and length of the text. The length is
+  limited to 140 characters, as required by Twitter. An attempt to
+  input more text results in a beep by McTwit, alerting you that no
+  more text may be added until you remove some text. The maximum length
+  of text you may input is actually less than 140 for a reply, retweet,
+  or direct message, since it needs to start with a prefix of
+  @recipient, rt recipient, or d recipient, as a processing instruction
+  to Twitter. McTwit adds the prefix automatically, and indicates the
+  maximum length of content in the title of the input dialog.</a></p>
+
+  <p>McTwit supports another form of retweeting via email. Press Alt+U
+  for Utilities and then Enter for the default subchoice. A message is
+  initiated in your default email program. The subject is &quot;Fwd
+  from ScreeName on Twitter.&quot; The body is the text of the Twitter
+  message. Edit as desired, specify a recipient, and send the
+  message.</p>
+
+  <h1><a name="A7">Managing Users</a></h1>
+
+  <p><a name="A7">The Leaders command, Alt+L, gets users whom the
+  selected user is following. The followers command, Alt+F, gets users
+  who are following the selected user. The Join command, Alt+J, sets
+  the selected user as one of your leaders, or toggles notifications of
+  his or her tweets to your mobile phone. The ?relationship command,
+  Alt+Shift+Slash or Alt+Question, reports whether a user is following
+  another, and vice versa. The comparison is made between the selected
+  user, the 1other user, or yourself.</a></p>
+
+  <p>The Zap command, Alt+Z, removes something according to the type of
+  item. The command deletes a tweet or direct message by you, or
+  removes a favorite message from your cache. The command also drops
+  someone as your leader, blocks someone as your follower, or removes
+  that user from your blocked list (so you may be followed again). The
+  |blocked command, Alt+Bar, displays those you have blocked.</p>
+
+  <p>The Extra command, Alt+X, gets more information about the selected
+  user, which is displayed in the viewing area. All available
+  information about the user is shown. Also, if the current message is
+  a reply, information about the prior message is shown first.</p>
+
+  <h1><a name="A8">Navigating Items</a></h1>
+
+  <p><a name="A8">The list of items supports navigation by arrow keys
+  or the initial letter of an item. The Keywords command, Alt+K,
+  searches for an item, starting at the top, based on text it contains.
+  A match does not depend on capitalization. The Again command, Alt+A,
+  searches for the next match, if any.</a></p>
+
+  <p>The Order command, Alt+O, sorts list items in alphabetical,
+  chronological, or recent order. Recent is the default, meaning that
+  the most recent item appears at the top of the list, and the oldest
+  appears at the bottom. The setting is remembered for subsequent
+  lists.</p>
+
+  <p>The Query command, Alt+Q, prompts for a &quot;regular
+  expression&quot; for filtering the list. The syntax of regular
+  expressions is an advanced topic that is beyond the scope of this
+  documentation (many tutorials are available on the web). If no
+  punctuation symbols are used, the regular expression acts like the
+  keywords search, except that it searches all text of each message or
+  user item, not just the part displayed in the list. Various
+  punctuation symbols have special meaning in a regular expression, and
+  they may be used to specify almost any condition or combination of
+  conditions for text to be considered a match.</p>
+
+  <p>For example, entering &quot;baseball&quot; (without the quotes) as
+  a query expression would reduce the list to only those items that
+  mentioned the sport, whether in associated message or user
+  information. A query of &quot;baseball|golf&quot; would match either
+  sport.</p>
+
+  <p>When you press the Query button, McTwit offers subchoices called
+  Priority, Rest, Input, and All. You can press Enter for the default,
+  Priority button if you have defined a regular expression for this
+  setting in the configuration dialog. For example, your expression
+  could be a list of scree names seperated by the vertical bar
+  character, e.g.,<br>
+  User1|User2|User3</p>
+
+  <p>This would filter the list so that it only contained messatges
+  that included those names (ignoring capitalization). The Rest button
+  displays the items that are not matched by that query.</p>
+
+  <p>The Input choice prompts you for a regular expression to enter.
+  The last one entered in the current McTwit session is the default
+  value, so you may keep refining the expression by editing the
+  previous one. The All choice matches all items in the list, removing
+  any filter.</p>
+
+  <p>The [store command, Alt+LeftBracket, temporarily saves the content
+  and position of the list and viewing area. This may be useful if you
+  want to check another list, and then show previous items again with
+  the [restore command, Alt+RightBracket. Such information cannot be
+  restored in another session of McTwit.</p>
+
+  <h1><a name="A9">Miscellaneous Commands</a></h1>
+
+  <p><a name="A9">The 7update command, Alt+7, lets you change some
+  parts of your Twitter profile, including your full name, URL,
+  description, and location. A summary of each field appears on the
+  status line, including the maximum number of characters Twitter
+  permits for that data.</a></p>
+
+  <p>The 5orite command, Alt+5, puts the current message in your cache
+  of favorites. The \cache command, Alt+Backslash, displays the
+  favorites of yourself or the selected user.</p>
+
+  <p>The Boundary command(Alt+B), sets an upper boundary on how many
+  pages of items are to be retrieved from Twitter. The default is 0,
+  meaning no limit. Since Twitter limits the amount of resources
+  consumed by each user per hour, you may wish to use this command if
+  you are running into resource limits. An indication of this problem
+  is when no items are retrieved by McTwit, even though you are fairly
+  sure that updates are available on the Twitter.com web site.</p>
+
+  <p>The 4get command, Alt+4, prompts whether to forget wheher messages
+  have been previously shown by McTwit. The default is No, thereby
+  remembering what has already been shown. Choosing Yes instead will
+  show all messages currently available from Twitter. The current value
+  of this setting is the default button in the confirmation dialog of
+  the command.</p>
+
+  <p>The .auto, 1Other, 4get, Duplic8, and Boundary settings are
+  remembered from one McTwit session to another. These settings may be
+  changed either with the Configure dialog or individual commands.</p>
+
+  <p>The Export command, Alt+E, saves text in the viewing area for the
+  current item. The text is appended to a file called Export.txt in the
+  McTwit data folder, located by default at<br>
+  %AppData%\McTwit\Export.txt</p>
+
+  <p>where %AppData% refers to the environment variable containing the
+  location of the Windows special folder for Application Data.<br>
+  This file is automatically opened in your default text editor after
+  closing McTwit. You can then use the text in other ways. Delete the
+  file if you want McTwit to start a new file in the next session.</p>
+
+  <p>The Duplic8 command, Alt+8, toggles a mode in which a copy of each
+  item you retrieve is stored automatically in the export file. If you
+  think you will want to save a lot of items, turn on this mode before
+  retrieving them. Toggle off the setting to stop appending to the
+  file. The setting is remembered from one McTwit session to
+  another.</p>
+
+  <p>The Go command, Alt+G, looks for a URL in the current item. If not
+  found within message text, McTwit looks for a URL in associated, user
+  information. If found, McTwit prompts with an input box that gives
+  you a chance to edit the URL or cancel the operation. If you accept a
+  URL, it is opened in your web browser. If no items are in the list
+  when you perform this command, McTwit offers a list of over 50
+  Twitter-related web sites.</p>
+
+  <p>The Yield command, Alt+Y, is a convenience for screen reader
+  users. It says the number of items in the list and then reads their
+  text.</p>
+
+  <p>The Configure command, Alt+C, lets you change settings such as
+  your screen name and password, which are needed for authorization by
+  Twitter (if this information is not found when McTwit is loading, you
+  are prompted for it). The command offers subchoices to change
+  settings either via a dialog (the default button), or manually via a
+  text editor. With the Manual button, the McTwit.ini configuration
+  file is opened in the default text editor, and you must restart
+  McTwit for any changes you save to take effect.</p>
+
+  <p>Other subchoices are Reset, Create, and Switch. The Reset button
+  invokes the dialog with default settings. The Create button invokes
+  the dialog similarly, but after prompting for the name of a
+  configuration file to create. The Switch button lets you pick one of
+  the .ini files in the McTwit data folder, which are assumed to be
+  configuration files.</p>
+
+  <p>A different configuration file may also be passed to McTwit as a
+  command-line parameter. Without one specified, its value is assumed
+  to be<br>
+  &quot;%AppData%\McTwit\McTwit.ini&quot;</p>
+
+  <p>Note that the parameter is enclosed in quotes since it may contain
+  spaces. A path with a different file or folder name may be passed as
+  a parameter in order to manage another account on Twitter. If a file
+  name without a folder is specified, McTwit assumes the McTwit program
+  folder -- the one containing McTwit.exe. This allows McTwit to be run
+  on portable media, where all files needed are stored in the same
+  folder. As a convenience, the program folder contains a batch file,
+  McTwitPortable.bat, for running McTwit in this situation.</p>
+
+  <p>The configuration dialog includes settings that also have quick
+  hotkeys, such as 1other, 4get, and Boundary. Other settings, changed
+  less often, are also included such as SoundFile, User, and Password.
+  A summary of the setting with focus appears on the status line.</p>
+
+  <p>The CombinedProcessing setting specifies which commands are used
+  to gather such messages: Direct, Replies, and/or New. The value of
+  the setting may include three characters, each pertaining to one of
+  these commands. The initial letter of a command means that it should
+  be included in combined messages. If the letter is in upper case,
+  then its type is also spoken when navigating the list with arrow
+  keys. Otherwise, the type is not spoken, though it still appears on
+  the status line. The default value is DRN -- meaning that Direct,
+  Replies, and New commands are used and that each type is spoken.</p>
+
+  <p>The EnhancedSpeech setting determines whether a screen reader API
+  is used for targeted messages. For example, the =balance command says
+  your rate balance if a screen reader API is found. Otherwise, the
+  status line may be checked for such messages.</p>
+
+  <p>The FullName setting may be used to specify that the full name of
+  a user be shown in a list of messages. The default is for the screen
+  name to be used.</p>
+
+  <p>The RelativeTime setting specifies whether the time stamp of a
+  message in the viewing area is conveyed as the difference from the
+  current, local time. The default is to convey absolute dates and
+  times. McTwit drops detail in a relative time to be more friendly,
+  e.g., seconds are not shown if the difference is more than one
+  minute.</p>
+
+  <p>The SoundFile setting specifies a .wav file to play when automatic
+  checking finds combined messages. The default is chimes.wav in the
+  McTwit program folder. Leave the setting blank if no sound is
+  desired.</p>
+
+  <p>The JunkFilter setting specifies a regular expression for
+  spam-type messages that you want to automatically exclude from being
+  displayed. Key fields of each excluded item are appended to a file
+  called Junk.txt in the McTwit data folder, one item per line. You can
+  examine this file via a subchoice of the Utilities command,
+  Alt+U.</p>
+
+  <p>The /search command, Alt+Slash, prompts for tweets to find. A
+  query may be entered using the same syntax as on the twitter.com web
+  site. For example, you can search for the #McTwit hash tag.</p>
+
+  <p>The -trends command, Alt+Dash, gets a list of the 10 most popular
+  topics currently on Twitter. The =balance command, Alt+Equals, shows
+  how much is left in your current &quot;rate limit&quot; on Twitter,
+  which permits 100 &quot;hits&quot; per hour. The +elevate command,
+  Alt+Shift+Equals or Alt+Plus, checks whether an update to McTwit may
+  be installed.</p>
+
+  <p>The Help command, Alt+H, presents this documentation in your web
+  browser. In addition, a summary of commands is displayed in the
+  viewing area, as well as in the following section.</p>
+
+  <h1><a name="A10">Handy Utilities</a></h1>
+
+  <p><a name="A10">McTwit has an extensive Utilities menu. It offers
+  handy ways of getting useful information, which is obtained mostly
+  from third-party web services rather than from twitter.com, itself.
+  Some are still Twitter-related, while others are general-purpose
+  conveniences that exploit free web 2.0 services with the Python
+  programming language. The utilities are as follows:</a></p>
+
+  <p>@User Stats - Get a variety of statistics about a user, e.g.,
+  average tweets per day and hash tags used, in order to help you
+  decide whether to follow him or her on Twitter.</p>
+
+  <p>#Hashtag Lookup - Get definitions of hash tags (a word preceded by
+  the # symbol). People on Twitter use these to annotate messages for
+  easier categorizing and searching.</p>
+
+  <p>:Dictionary Lookup - Get definitions and other information about a
+  word.</p>
+
+  <p>508 Check - Check a web page for compliance with accessibility
+  standards of the United States Government (Section 508 of the
+  Rehabilitation Act), as well as standards of the World Wide Web
+  Consortium (W3C).</p>
+
+  <p>Address Lookup - Search for addresses of organizations meeting
+  geographic and other criteria.</p>
+
+  <p>Business Reviews - Search for reviews of a business by inputting
+  its phone number.</p>
+
+  <p>Common URLs - Show a list of the 100 most commonly referenced URLs
+  on Twitter at the time. These typically point to news stories that
+  people have been retweeting.</p>
+
+  <p>Driving Directions - Input a starting and ending location, and get
+  a list of steps to get there by car (a blind person might share this
+  with a friend or cab driver). The location may be specified as a
+  street address in any country.</p>
+
+  <p>Feed Find - Get a list of RSS and ATOM feeds made available by a
+  web site, e.g., by pointing to a URL in a tweet. A hotkey then lets
+  you open a feed at the cursor position.</p>
+
+  <p>Google Search and Set Suggestions - Propose a Google search and
+  get a list of popular searches that are similar. Also Get a list of
+  terms that may be part of the same set.</p>
+
+  <p>Help on twitter.com - Open the Twitter help portal in your web
+  browser.</p>
+
+  <p>Interesting Places - Get a list of nearby places to eat, shop, or
+  visit based on a location.</p>
+
+  <p>Language Translation - Translate a tweet in another language, or
+  any text you specify, between about 100 different languages. You can
+  quickly understand what a foreign phrase means or how to write
+  it.</p>
+
+  <p>Members of Congress - Get a list of House and Senate members for a
+  zip code, with various data about them including committee
+  assignments and contact information, including Twitter screen name if
+  available.</p>
+
+  <p>Neighborhood Search - Search for places near a location, e.g.,
+  restaurants with a particular cuisine near an address you are
+  visiting (anywhere in the world).</p>
+
+  <p>Original URL - Get the original version of a URL that was
+  shortened for sharing in a tweet.</p>
+
+  <p>Quotes of the Day - Get a humorous quote and several motivational
+  quotes each day.</p>
+
+  <p>Recommended URLs - Get a list of currently popular URLs that
+  people are saving as bookmarks.</p>
+
+  <p>Short URL - Get a shortened version of a URL so you can share it
+  in a tweet and have more text to type within the 140 character
+  limit.</p>
+
+  <p>Twitter Screen Name - Search for people on Twitter, e.g., an old
+  classmate to reconnect with.</p>
+
+  <p>-Trend Topics - Get a list of topics that are currently popular on
+  Twitter.</p>
+
+  <p>Url Downloads - Batch download multiple files based on an initial
+  URL and the extensions of files linked to it.</p>
+
+  <p>Virtual White Pages - Search for residential listings in U.S.
+  phone books.</p>
+
+  <p>Weather Check - Get a summary of current and forecasted conditions
+  for any location.</p>
+
+  <p>Extra Word Info - Get definitions of a word and examples of its
+  use.</p>
+
+  <p>Yahoo! Term Extractions - Get noteworthy noun phrases contained in
+  a web page.</p>
+
+  <p>Zoom Info - Search for employment contacts by name or email
+  address.</p>
+
+  <h1><a name="A11">Summary of Commands</a></h1>
+
+  <p><a name="A11">McTwit = Alt+Control+M, Load or activate the McTwit
+  program</a></p>
+
+  <p>Items = Alt+I, Focus on the list of messages or users</p>
+
+  <p>View = Alt+V, Focus on Additional information about the current
+  list item</p>
+
+  <p>New = Alt+N, Display new messages from you and your leaders (those
+  you follow on Twitter)</p>
+
+  <p>Again = Alt+A, Find the next keywords match in the list</p>
+
+  <p>Boundary = Alt+B, Set an upper boundary on how many pages of items
+  are returned from Twitter (0 means no limit)</p>
+
+  <p>Configure = Alt+C, Change McTwit settings such as your user name
+  and password</p>
+
+  <p>Direct = Alt+D, Display direct messages that were sent privately
+  to you</p>
+
+  <p>Export = Alt+E, Save text of the viewing area to the file
+  Export.txt, which is opened after you close McTwit</p>
+
+  <p>Followers = Alt+F, Display followers of you or the selected
+  user</p>
+
+  <p>Go = Alt+G, Open a referenced URL in your web browser, or pick
+  from a list of over 50 Twitter related web sites</p>
+
+  <p>Join = Alt+J, Start following a user, or toggle tweet
+  notifications to your mobile phone</p>
+
+  <p>Keywords = Alt+K, Find a list item based on text it contains</p>
+
+  <p>Leaders = Alt+L, Display leaders of you or the selected user</p>
+
+  <p>Messages = Alt+M, Display tweets by you or the selected user</p>
+
+  <p>Order = Alt+O, Change the order of list items, most recent first
+  (default), chronological, or alphabetical</p>
+
+  <p>Public = Alt+P, Display messages in the public timeline</p>
+
+  <p>Query = Alt+Q, Filter list items based on a regular expression</p>
+
+  <p>Replies = Alt+R, Display public, reply messages to you, or public
+  mentions of you</p>
+
+  <p>Sent = Alt+S, Display direct messages that you sent privately to
+  others</p>
+
+  <p>Tweet = Alt+T, Update your status by posting a public message</p>
+
+  <p>2tweet = Alt+2, Tweet with a public reply to the selected user</p>
+
+  <p>3tweet = Alt+3, Retweet the selected message</p>
+
+  <p>Utilities = Alt+U, Perform miscellaneous tasks</p>
+
+  <p>Write = Alt+W, Write a private, direct message to the selected
+  user</p>
+
+  <p>E&amp;Xtra = Alt+X, Display extra information about the selected
+  user, and about the current message if a reply</p>
+
+  <p>Yield = Alt+Y, Say the number of list items and read their
+  text</p>
+
+  <p>Zap = Alt+Z, Depending on the type of list item, delete a public
+  tweet or direct message by you, block a user from following you,
+  remove that user from your blocked list, or Stop following the
+  selected user</p>
+
+  <p>0items = Alt+0, Clear the list, so inquiries are based on yourself
+  unless you selected a user with the 1other command</p>
+
+  <p>1other = Alt+1, Set or clear the screen name of another user, who
+  will be referenced as the selected user instead of pointing to a list
+  item</p>
+
+  <p>4get = Alt+4, Choose whether to omit messages previously shown
+  (default), or to forget time stamps and show all messages currently
+  available from Twitter</p>
+
+  <p>5orite = Alt+5, Put current message in favorites cache</p>
+
+  <p>\cache = Alt+Backslash, Display messages in the favorites cache of
+  yourself or the selected user</p>
+
+  <p>|blocked = Alt+Bar, Display users whom you have blocked</p>
+
+  <p>7update = Alt+7, Update your Twitter profile, such as full name,
+  URL, description, and location</p>
+
+  <p>Duplic8 = Alt+8, Toggle a mode in which a copy of each item
+  retrieved is saved to the export file</p>
+
+  <p>9rewind = Alt+9, Display the reply chain of messages starting with
+  the current one</p>
+
+  <p>,bine = Alt+, Display combined message items from the New,
+  Replies, and Direct commands, without marking that they have been
+  seen</p>
+
+  <p>.auto = Alt+., Set time period in minutes for auto checks of
+  combined messages (default is 0, meaning no check)</p>
+
+  <p>[store = Alt+LeftBracket, Save list items temporarily</p>
+
+  <p>]restore = Alt+RightBracket, Recall stored items</p>
+
+  <p>/search = Alt+/, Search Twitter.com for tweets, as if searching on
+  the web site, itself</p>
+
+  <p>?relationship = Alt+Shift+Slash or Alt+Question, Check whether a
+  user is following another, and vice versa</p>
+
+  <p>-trends = Alt+Dash, Show the most popular Twitter topics at
+  present</p>
+
+  <p>balance = Alt+=, Show your current rate limit on Twitter</p>
+
+  <p>+elevate = Alt+Shift+Equals (Alt+Plus), Check whether an update to
+  McTwit may be installed</p>
+
+  <p>Help = Alt+H, Display a summary of commands, hotkeys, and
+  descriptions</p>
+
+  <p>Close = Escape or Alt+F4, Close the McTwit program</p>
+
+  <h1><a name="A12">Summary of Configuration Settings</a></h1>
+
+  <p><a name="A12">.auto = Alt+., Set time period in minutes for auto
+  checks of combined messages (default is 0, meaning no check)</a></p>
+
+  <p>1other = Alt+1, Set or clear the screen name of another user, who
+  will be referenced as the selected user instead of pointing to a list
+  item</p>
+
+  <p>4get = Alt+4, Choose whether to omit messages previously shown
+  (default), or to forget time stamps and show all messages currently
+  available from Twitter</p>
+
+  <p>Duplic8 = Alt+8, Toggle a mode in which a copy of each item
+  retrieved is saved to the export file</p>
+
+  <p>Boundary = Alt+B, Set an upper boundary on how many pages of items
+  are returned from Twitter (0 means no limit)</p>
+
+  <p>CombinedProcessing = Alt+C, Set combined message types and speech
+  (d, r, n as lower or upper case)</p>
+
+  <p>EnhancedSpeech = Alt+E, Set whether a screen reader API is used
+  for targeted speech (default)</p>
+
+  <p>FullName = Alt+F, Set whether the full name or screen name
+  (default) of a message author is shown</p>
+
+  <p>JunkFilter = Alt+J, Set regular expression for messages to be
+  excluded, e.g., SpamAuthor|CurseWord</p>
+
+  <p>OrderItems = Alt+O, Set order of items to initial letter of
+  recent, chronological, or alphabetical</p>
+
+  <p>PriorityQuery = Alt+P, Set regular expression for Priority
+  subchoice of Query command, e.g., User1|User2|user3</p>
+
+  <p>RelativeTime = Alt+R, Set whether relative or absolute time
+  (default) is shown in the viewing area of message</p>
+
+  <p>SoundFile = Alt+S, Set .wav file, if any, to indicate auto
+  combined messages (default is chimes.wav)</p>
+
+  <p>User = Alt+U, Set screen name or email address for connecting to
+  Twitter</p>
+
+  <p>Password = Alt+W, Set password for connecting to Twitter</p>
+
+  <h1><a name="A14">Other Help Resources</a></h1>
+
+  <p><a name="A14">RicksterTheGeek (Rick Harmon) has posted an audio
+  demo of McTwit on the front page of<br></a><a href=
+  "http://BlindCoolTech.com">http://BlindCoolTech.com</a></p>
+
+  <p>Erin Edgar posted another piece there that introduces Twitter from
+  a blindness perspective. He has also done a Twitter presentation on
+  ACB Radio at<br>
+  <a href=
+  "http://www2.acbradio.org/mainmenu/shows.php">http://www2.acbradio.org/mainmenu/shows.php</a></p>
+
+  <p>SteveOfMaine (Steve Sawczyn) has also posted a demo at<br>
+  <a href="http://bit.ly/166Hsr">http://bit.ly/166Hsr</a></p>
+
+  <p>SeroTalk (Michael Lauf) has posted a podcast on accessible Twitter
+  tools, including McTwit at<br>
+  <a href=
+  "http://serotalk.com/podcasts/TechChat016.mp3">http://serotalk.com/podcasts/TechChat016.mp3</a></p>
+
+  <p>BlindTwit (Jonathan Mosen) has also done a podcast on Twitter
+  tools from a JAWS perspective at<br>
+  <a href=
+  "http://www.freedomscientific.com/FSCast/episodes/fscast030-may2009.asp">
+  http://www.freedomscientific.com/FSCast/episodes/fscast030-may2009.asp</a></p>
+
+  <p>An Accessible World presentation on Twitter by Rich Cavallaro is
+  at<br>
+  <a href=
+  "http://accessibleworld.org/category/site-categories/tek-talk-archives">
+  http://accessibleworld.org/category/site-categories/tek-talk-archives</a></p>
+
+  <p>Pyyhkala (Mika Pyyhkala) made a presentation on new media --
+  including a McTwit demo -- to the Visually Impaired and Blind User
+  Group,<br>
+  <a href=
+  "http://www.vibug.org/audio/vbg0609-c.mp3">http://www.vibug.org/audio/vbg0609-c.mp3</a></p>
+
+  <p>He also did a video recording with JamalMazrui (McTwit author)
+  at<br>
+  <a href=
+  "http://www.ustream.tv/recorded/1615364">http://www.ustream.tv/recorded/1615364</a></p>
+
+  <p>An article about use of Twitter by people with disabilities is
+  at<br>
+  <a href=
+  "http://www.twitip.com/twitter-remaking-the-persona-of-the-physically-challenged/#more-2104">
+  http://www.twitip.com/twitter-remaking-the-persona-of-the-physically-challenged/#more-2104</a></p>
+
+  <p>A Twitter Guide Book that gathers tips and instructions from the
+  web is at<br>
+  <a href=
+  "http://mashable.com/guidebook/twitter/">http://mashable.com/guidebook/twitter/</a></p>
+
+  <h1><a name="A13">Usage Tips</a></h1>
+
+  <p><a name="A13">Check the label of the listbox for a reminder about
+  what type of items it contains.</a></p>
+
+  <p>Check the status line to review what enhanced speech messages
+  McTwit produced over the cource of a command.</p>
+
+  <p>Check the title bar to confirm the recipient of a message you are
+  sending, and whether it will be a public reply or direct message.
+  Clear the 1other setting (set it to a blank value) if the recipient
+  is not someone from the current list item as you intend (the 1other
+  setting takes precedence).</p>
+
+  <p>Alt+D, Alt+R, and Alt+N always retrieve messages for you. Other
+  commands may apply to the selected user, so press Alt+0 first if you
+  want to ensure that they apply to you.</p>
+
+  <p>If you are going to switch to another application and want
+  combined messages to be automatically retrieved, press Alt+0 to
+  ensure the list is cleared first.</p>
+
+  <p>Significant processing is required for auto checks of combined
+  messages, so specify a time period that balances frequency of checks
+  and amount of items retrieved. 5 minutes may be a good, initial
+  choice.</p>
+
+  <p>Each setting in the Configuration and 7update subdialogs has a
+  unique Alt+Character combination, so you can go to it directly.</p>
+
+  <p>Twitter may return an error message for various reasons: you have
+  reached a rate, page, or update limit; the server is busy; a request
+  cannot be satisfied. The latter can happen because of invalid
+  authorization, e.g., trying to send a direct message to someone when
+  at least one of you is not following the other. It can also happen
+  because the desired state is already present, e.g., trying to follow
+  someone you are already following, or get phone notifications that
+  you are already getting.</p>
+
+  <p>If McTwit is behaving erratically, the cause may be temporary
+  glitches with the Twitter API, sometimes due to overwhelming traffic.
+  If McTwit problems persist, its configuration file may have become
+  corrupt somehow. Try the Reset subchoice of the Configure command, or
+  uninstall and then reinstall the program.</p>
+
+  <p>Try to get technical support questions answered by other McTwit
+  users, since the author may not be able to respond in a timely
+  manner. Questions in public reply tweets to JamalMazrui are
+  preferable to email because responses may benefit others who are
+  following me. Use email for a complex issue that cannot be explained
+  in a tweet. If McTwit is seriously unstable or nonfunctional, email
+  the following error log, if found, in the body of a message:<br>
+  C:\Program Files\McTwit\McTwit.exe.log</p>
+
+  <p>If you do not find an error log, try running the console version
+  of McTwit, which prints errors to the screen, e.g., by entering the
+  following in the Windows Start/Run dialog:<br>
+  c:\program files\mctwit\McTwitConsole.bat</p>
+
+  <p>To examine leaders with notifications, use the following input to
+  the Query command:<br>
+  Notifications: True</p>
+
+  <h1><a name="A15">Development Notes</a></h1>
+
+  <p><a name="A15">For the technically interested, I developed McTwit
+  in the Python language with several external packages: twyt,
+  orderedDict, configObj, simpleJson, Layout by Code, PyWinAuto,
+  wxPython, SayTools, and py2exe. The indentation-related features of
+  the EdSharp editor<br></a><a href=
+  "http://EmpowermentZone.com/edsetup.exe">http://EmpowermentZone.com/edsetup.exe</a><br>
+
+  have been helpful in managing the formatting requirements of
+  Python.</p>
+
+  <p>The default location of source code for McTwit is<br>
+  C:\Program Files\McTwit\source</p>
+
+  <p>Its documentation is located at<br>
+  C:\Program Files\McTwit\docs</p>
+
+  <p>Thanks go to JeffBishop (Jeff Bishop) and BrianHartgen (Brian
+  Hartgen) for developing Window-Eyes and JAWS scripts for McTwit,
+  respectively.</p>
+
+  <p>McTwit began as a command-line program. The GUI version also
+  relies on the Twyt API. The remainder of this documentation is for
+  users of the command-line client, or for developers who wish to use
+  McTwit code in their own projects.</p>
+
+  <p>The latest version of McTwit is available at<br>
+  <a href=
+  "http://EmpowermentZone.com/mtsetup.exe">http://EmpowermentZone.com/mtsetup.exe</a></p>
+
+  <p>I welcome feedback, which helps mcTwit improve over time. When
+  reporting a problem, the more specifics the better, including steps
+  to reproduce the problem, if possible.</p>
+
+  <p>Jamal Mazrui<br>
+  <a href=
+  "mailto:jamal@EmpowermentZone.com">jamal@EmpowermentZone.com</a><br>
+  Twitter Screen Name: JamalMazrui</p>
+
+  <h1><a name="A16">Change Log</a></h1>
+
+  <p><a name="A16">McTwit 2.7 on March 7, 2010<br>
+  Fixed the Follower and Leader commands based on updated Twitter API
+  requirements. Made the installer for JAWS scripts work on 64-bit
+  Windows.</a></p>
+
+  <p>Added support for the recent API feature that standardizes
+  retweets. The 3tweet command, Alt+3, now prompts whether to do a
+  standard or custom retweet. The standard behavior does not allow one
+  to add comments -- it is a verbatim relay of the prior text. The
+  custom option works like before, allowing one to edit the text and
+  add comments before or after the original text. There is less
+  built-in support for a custom retweet in the Twitter API and web
+  interface. It is like a tweet that indicates your source and sends a
+  copy to the @author retweeted.</p>
+
+  <p>The New command, Alt+N, now includes standard retweets sent by
+  your leaders. The original author of a standard retweet is shown in
+  the second line of the viewing area.</p>
+
+  <p>The /search command, Alt+Slash, now prompts whether to search
+  messages or users. The messages choice works like before. The Users
+  choice will prompt for a search query, using the same syntax as the
+  Find People page on the twittter.com web site. The results are
+  displayed as a user list, similar to the Followers or Leaders
+  command. Tab to the viewing area (or press Alt+V) for additional
+  information about the selected user in the list. Press Alt+X for
+  extra information. Use the Join command, Alt+J, if you want to start
+  following the person.</p>
+
+  <p>The 2tweet command, Alt+2, now prompts for confirmation if you
+  start to reply publicly to a direct message.<br>
+  Fixed a problem on Windows Vista and above where the McTwit window
+  was not activated after populating a list of messages or users.</p>
+
+  <p>Added the official Twitter blog to the list of URLs offerred by
+  the Go command (when no items are in the list). Created a compilation
+  of about 150 topics from the support section of the Twitter web site.
+  The files TwitterHelpGuide.txt and TwitterHelpGuide.htm are located
+  in the McTwit program folder. The HTML version may also be opened
+  with the McTwit Help command, with an option in the McTwit program
+  group of the Windows Start Menu, or with the following link.<br>
+  <a href="TwitterHelpGuide.htm">file://TwitterHelpGuide.htm</a></p>
+
+  <p>McTwit 2.6 on November 20, 2009<br>
+  Added the Interesting Places utility, which searches for nearby
+  places to eat, shop, or visit via NextStop.com. McTwit prompts for a
+  location, which can be in the city, state format, or a complete
+  address with commas seperating postal address lines. Also input the
+  distance in kilometers to search from that location, and any words
+  that you want to narrow the search, e.g., Chinese for that type of
+  food. An excerpt from a review of each place is also included if
+  available.</p>
+
+  <p>Added to the 508 Check utility the report of Wave, a web
+  evaluation checker from WebAim.org. Updated the Window-Eyes scripts
+  distributed with McTwit.</p>
+
+  <p>McTwit 2.6 on November 6, 2009<br>
+  Enhanced the Quotes of the Day utility to Show a funny quote from
+  IHeartQuotes.com before the motivational quotes from
+  QuotationsPage.com. Enhanced the Extra Word Info utility to show
+  synonyms and antonyms from words.BigHugeLabs.com, in addition to the
+  definition and examples from Wordnik.com. Added a dash (-) prefix to
+  the name of the Trend Topics utility, so it has the same activation
+  character as the -Trends choice in the main dialog of McTwit. Renamed
+  the People Search utility to Twitter Name Search, invoked with the
+  letter T on the utilities menu. Added the Virtual White Pages
+  utility, which is like searching the white pages of U.S. phone books
+  for listings of residential phone numbers and postal addresses. Added
+  the ZoomInfo Contact Search utility, which enables searches for
+  employment contacts by name or email address. Added Twitter lists of
+  the New York Times to the Go command, as well as twittorati.com,
+  which lists the 100 most popular blogs on Twitter.</p>
+
+  <p>McTwit 2.6 on November 5, 2009<br>
+  Included JAWS scripts that enhance functionality in the viewing area.
+  Added twittorati.com to the Go command. Also added a Twitter Guide
+  Book that gathers tips and instructions from the web<br>
+  <a href=
+  "http://mashable.com/guidebook/twitter/">http://mashable.com/guidebook/twitter/</a></p>
+
+  <p>McTwit 2.6 on November 4, 2009, Second update<br>
+  Tried another Unicode fix. Included latest Window-Eyes scripts, which
+  significantly enhance functionality in the viewing area, e.g., F8 to
+  start a selection and Shift+F8 to complete it.</p>
+
+  <p>McTwit 2.6 on November 4, 2009<br>
+  Tried another Unicode fix. Added listorious.com and TLists.com to Go
+  command.</p>
+
+  <p>McTwit 2.6 on November 3, 2009<br>
+  Fixed the Language Translation utility not working with a source
+  language besides Unknown. Fixed character encoding problems that
+  occasionally arise when getting tweets. Tried to fix report spammer
+  option when blocking a follower (hard to test because I do not have a
+  spammer to report at present!). Made utilities consistently say
+  &#39;Setting view area&#39; so you know when results have been
+  retrieved from the Internet. Added the Extra Word Info utility, which
+  gets definitions of a word and examples of its use via
+  wordnik.com.</p>
+
+  <p>McTwit 2.6 on October 29, 2009<br>
+  Added the TwitDiff and TwitDone web sites to the Go command. Added
+  the Address Lookup utility, which gives address information on
+  organizations via jigsaw.com. McTwit prompts for an organization
+  name, area code, zip code, web site type, and fortune rank. Fill in
+  one or more fields for the search. For example, input gov for the web
+  site type in order to get government organizations, or 500 in the
+  fortune field to get companies in the top fortune 500.</p>
+
+  <p>McTwit 2.6 on October 27, 2009<br>
+  Enhanced the Language Translation utility so that it shows the source
+  language that was detected. Added the Yahoo! Term Extractions
+  utility, which reports noteworthy noun phrases contained in a web
+  page. Added the :Dictionary Lookup utility (invoked directly with the
+  : character), which gives definitions and other information about a
+  word via wiktionary.com.</p>
+
+  <p>McTwit 2.6 on October 26, 2009<br>
+  Added a Background button to the Go subdialog, allowing you to open a
+  URL in another window but keep McTwit as the active one. Enhanced the
+  Google Suggestions utility to provide set as well as search data. For
+  example, enter a comma-seperated list of U.S. presidents and let
+  Google suggest a more complete list. Added the Quotes of the Day
+  utility, which offers daily food for thought from several famous
+  quotes and their authors.</p>
+
+  <p>Added the URL Downloads utility for batch downloading files based
+  on an initial URL and the extensions of files linked to it. McTwit
+  analyzes the web page and puts a space-seperated list of extensions
+  in an input box. Edit it so that only the extensions you want remain.
+  McTwit then puts a list of those links in a multiple-selection
+  listbox, showing the link text and URL for each. The items are all
+  selected by default, but you can use arrow keys and Spacebar to
+  unselect ones as desired. The next dialog prompts for a folder for
+  saving the files, which will be remembered as the default choice the
+  next time. McTwit says the name of each file as it is being
+  downloaded.</p>
+
+  <p>Enhanced all utilities that take a URL as input so they can use
+  the web address in the most recently opened window of Internet
+  Explorer. McTwit uses that address if it did not find a URL in the
+  current list item or viewing area. If no such address is found,
+  McTwit uses the last value specified as input for that utility. Thus,
+  to ensure the IE address is used, press Alt+0 to clear the list
+  before invoking the utility. To ensure that the last value is used,
+  ensure that IE is closed.</p>
+
+  <p>Renamed a couple of utilities so that each still has a unique,
+  initial character for direct activation from the utilities menu. The
+  new names are @User Stats and #Hashtag Lookup.</p>
+
+  <p>McTwit 2.5 on October 22, 2009<br>
+  Added support for mentions as well as replies by processing 2tweet
+  command like 3tweet command with regard to the vertical bar (|)
+  character. Added 508 Check utility, which checks a web page against
+  U.S. Section 508 accessibility standards via CynthiaSays.com (the
+  site limits checks to one per minute from the same location).</p>
+
+  <p>McTwit 2.5 on October 20, 2009<br>
+  Fixed bug in Short URL utility. Changed to upper case RT in syntax
+  for 3tweet command. Added Twitter-related web sites and removed
+  duplicate entries for a current total of 100.</p>
+
+  <p>McTwit 2.5 on October 19, 2009</p>
+
+  <p>Added three utilities: Business Reviews, Google Search
+  Suggestions, and Recommended URLs. Added &quot;Handy Utilities&quot;
+  section of documentation.</p>
+
+  <p>McTwit 2.5 on October 15, 2009<br>
+  Fixed the zapping of a favorite message. Added an option to report
+  someone to Twitter as a spammer when blocking the user as a
+  follower.</p>
+
+  <p>Added the People Search utility for finding someone on Twitter
+  based on keywords such as name or location. McTwit prompts for the
+  keywords (e.g., the first and last name of an old class mate), and
+  then passes the request to the Twitter web site, which prompts for
+  credentials if you are not currently logged in. A checkbox lets you
+  be remembered so you are not prompted for subsequent searches. The
+  search results page includes buttons to follow people who were
+  found.</p>
+
+  <p>Added the Language Translation utility. This uses the Google
+  Translate API to translate text of up to 500 characters between about
+  100 natural languages. The default text is from the selected message.
+  In this case, the source language is unknown and you just pick the
+  target language. If the list is empty, you pick the source language
+  as well, and enter text in the multi-line edit box. The translated
+  text is shown in the viewing area. You can test this functionality by
+  pressing Alt+P for the Public timeline, arrowing to a message in
+  another language, and then pressing Alt+U followed by L for the
+  language translation of that text.</p>
+
+  <p>In order to maintain unique letters for each item on the Utilities
+  menu, some were renamed. The new names are Common URLs, Members of
+  Congress, and Trend Topics.</p>
+
+  <p>McTwit 2.4 on October 13, 2009<br>
+  Fixed the Go command not opening a web page chosen from the list of
+  Twitter-related URLs. Enhanced the command so that it goes to a URL
+  in the viewing area if focus is on a URL and no items are in the
+  listbox. Enhanced the Hash Tag Lookup utility to check TagDef.com as
+  well as Tagalus.com.</p>
+
+  <p>Added the Feed Find utility. It prompts for a web source and
+  returns a list of RSS or ATOM feeds found. An http:// prefix is
+  assumed if not specified. For example, entering<br>
+  cnn.com</p>
+
+  <p>finds two RSS feeds related to top stories and latest stories. You
+  can press Alt+G on a feed URL to read its content or subscribe with a
+  feed reader.</p>
+
+  <p>Updated the portable version of McTwit at<br>
+  <a href=
+  "http://EmpowermentZone.com/mtsetup.zip">http://EmpowermentZone.com/mtsetup.zip</a></p>
+
+  <p>McTwit 2.4 on October 12, 2009 (second update)<br>
+  Enhanced the Weather Check utility with a web page from
+  braille.wunderground.com. This works with city, country locations as
+  well as U.S. zip codes. Added the Officials in Congress utility via
+  the API of SunlightLabs.com. This prompts for a U.S. zip code and
+  then shows information about corresponding Senators and
+  Representatives, including their Twitter screen name if any. Added
+  TweetMeNews.com to the list of Twitter-related URLs available with
+  the Go command (when the list is empty).</p>
+
+  <p>McTwit 2.4 on October 12, 2009<br>
+  Changed Short URL utility to use j.mp.com rather than TinyURL.com for
+  even shorter URLs. Added more utilities: Long URL, Driving
+  Directions, Neighborhood Search, and Weather Check. Long URL does the
+  reverse of Short URL, prompting for a URL, converting it, and copying
+  the result to the clipboard. Driving Directions prompts for a
+  starting and ending address, uses the Google Maps API, and puts the
+  estimated distance, duration, and steps in the viewing area. Specify
+  an address as if you were addressing an envelope except for a comma
+  rather than return between each line, e.g.,<br>
+  1201 East-West Highway, Silver Spring MD 20910, USA</p>
+
+  <p>USA is assumed as the country if not specified. Neighborhood
+  Search prompts for an address in the same format and also for one or
+  more keywords specified as if searching on Google, e.g.,<br>
+  seafood steak</p>
+
+  <p>to find restaurants in the area that serve both seafood and steak.
+  Weather Check prompts for a Yahoo! location ID, which may be a zip
+  code in the U.S. A summary of current conditions and forecast is
+  provided in Celcius.</p>
+
+  <p>McTwit 2.3 on October 10, 2009<br>
+  Fixed serious bug introduced by alternate HTML parser that prevented
+  getting tweets (testing in the development environment did not reveal
+  the bug). Subsequently, made the fix compatible with Windows XP.</p>
+
+  <p>McTwit 2.3 on October 9, 2009<br>
+  Fixed bug recently introduced in Extra command (Alt+X). Included
+  latest Window-Eyes script package in the McTwit distribution.</p>
+
+  <p>Changed 3tweet command so that text may be inserted before the rt
+  @ScreenName: syntax. You can seperate text before and after that
+  syntax with a vertical bar character (|). If no vertical bar is found
+  in the tweet you input, McTwit puts all text after the special
+  syntax.</p>
+
+  <p>Used an alternate HTML parser to permit ampersand (&amp;) and
+  other characters that Python&#39;s HTML parser was sometimes
+  mistaking for unknown HTML entitity references, and then dropping.
+  Added Short Url choice to Utilities subdialog. Enter a URL, and a
+  shortened version will be pasted to the clipboard using the
+  TinyURL.com service. You can then paste it into a tweet. An http://
+  prefix is automatically added by McTwit if you do not enter it before
+  the domain name.</p>
+
+  <p>McTwit 2.3 on October 8, 2009<br>
+  Fixed 3tweet command by inserting a colon (:) after the @ScreenName
+  in accordance with new Twitter syntax. Fixed more Unicode issues.
+  Added choices to the Utilities subdialog using more third-party APIs:
+  Current Trends, Hash Tag Lookup, Popular URLs, and User Stats.
+  Depending on the type and lengh of information retrieved, it is
+  presented in a message box, in the viewing area, or in a web
+  page.</p>
+
+  <p>McTwit 2.2 on October 7, 2009</p>
+
+  <p>Added a subdialog to the Zap command with options to unfollow the
+  selected user, block that person from following you, or delete the
+  current message. Added several more Twitter-related web sites to the
+  Go command (when no items are in the list). Changed the Go command so
+  that it has a subdialog with two choices. The Open choice goes to the
+  referenced URL as before. The Inquire command tries to get more
+  information about the URL from a third-party Twitter API, e.g., the
+  title of the web resource, its media type, and an excerpt. If
+  information is available, it is shown in a message box.</p>
+
+  <p>McTwit 2.1 on July 20, 2009</p>
+
+  <p>Fixed not all properties being updated when switching
+  configurations.</p>
+
+  <p>McTwit 2.1 on July 14, 2009</p>
+
+  <p>Made installer recognize Program Files folder rather than hard
+  coding C:\Program Files (generally the location, but not necessarily,
+  e.g., the drive could be other than C:).</p>
+
+  <p>McTwit 2.1 on July 13, 2009<br>
+  Made configuration file encoded as UTF-8.</p>
+
+  <p>McTwit 2.1 on July 10, 2009</p>
+
+  <p>More Unicode changes in trying to support Chinese.</p>
+
+  <p>McTwit 2.1 on July 9, 2009<br>
+  Another Unicode fix. Added OrderItems setting to Configuration
+  dialog, equivalent to Alt+O command, and renamed choices to recent,
+  chronological, or alpha. Type the initial letter of a choice (lower
+  case recommended though not necessary). Alt+O also makes the current
+  setting the default button.</p>
+
+  <p>McTwit 2.1 on July 8, 2009</p>
+
+  <p>Fixed various Unicode errors. Increased ability of scripts to
+  control McTwit settings dynamically. Fixed #trends command not
+  working when a junk filter is set.</p>
+
+  <p>McTwit 2.1 on July 2, 2009</p>
+
+  <p>Fixed Alt+L or Alt+F not working when the selected item is a user
+  rather than message item. Included significantly updated Window-Eyes
+  and JAWS scripts in the McTwit distribution. Seperated out URLs to
+  audio presentations on McTwit in a new section of documentation
+  called Other Help Resources.</p>
+
+  <p>McTwit 2.1 on July 1, 2009</p>
+
+  <p>Fixed enhanced speech on Window-Eyes versions before 7.0. Added
+  subchoices to Join command for control over tweet notifications to
+  your mobile phone. Added Notifications field to viewing area of a
+  user, without requiring Alt+X for extra info. Dropped fields related
+  to color preferences from extra info.</p>
+
+  <p>McTwit 2.0 on June 30, 2009</p>
+
+  <p>Changed technique of how the Window-Eyes API is used for enhanced
+  speech, resulting in such messages being spoken more immediately
+  rather than queued. Fixed how the selected user is obtained from
+  /search message results, so that Followers, Leaders, Messages, and
+  Extra commands now work in that context.</p>
+
+  <p>McTwit 2.0 on June 29, 2009</p>
+
+  <p>Posted a zipped version of McTwit for unarchiving onto a portable
+  drive,<br>
+  <a href=
+  "http://EmpowermentZone.com/mtsetup.zip">http://EmpowermentZone.com/mtsetup.zip</a></p>
+
+  <p>An included file, AutoRun.inf, will automatically start McTwit on
+  a drive that is configured to react to this file when storage media
+  is inserted. Typically, however, removable drives are not configured
+  this way by default as a security measure. RunMcTwitPortable.bat to
+  start the program manually when logged onto the drive.</p>
+
+  <p>Added information to Extensions.ini to further help scripting.
+  Added McTwitC.exe, a console version of McTwit, to help debug systems
+  where the program crashes. Running that executable, or
+  McTwitConsole.bat, should print error messages on the screen.</p>
+
+  <p>McTwit 2.0 on June 26, 2009</p>
+
+  <p>Made the Reset and create subchoices of the Configure command
+  delete the ini file if found, ensuring that a completely new one is
+  created. Made the uninstaller delete McTwit.ini from the McTwit data
+  folder, so that if the program is reinstalled, a new configuration
+  file will be created. Added to the Usage Tips section of
+  documentation. Mentioned in the Install section that another way of
+  opening McTwit is entering its name in the Windows Start/Run
+  dialog.</p>
+
+  <p>McTwit 2.0 on June 25, 2009</p>
+
+  <p>Tried a correction for time stamp being off by a day during
+  certain periods. Fixed JunkFilter. Fixed ]restore command not working
+  when list of users is restored to list of messages.</p>
+
+  <p>McTwit 2.0 on June 20, 2009</p>
+
+  <p>Added capability for screen reader scripts to suppress enhanced
+  speech messages by setting EnhancedSpeech to No in Extensions.ini --
+  a file that may be created in the McTwit data folder.</p>
+
+  <p>McTwit 1.9 on June 17, 2009</p>
+
+  <p>Added shortcuts to update JAWS or Window-Eyes scripts in the
+  McTwit program group within the Windows Start Menu. Created
+  SayLine64.exe and SayFile64.exe utilities to better support McTwit on
+  64-bit Windows.</p>
+
+  <p>McTwit 1.9 on June 16, 2009</p>
+
+  <p>Added options at the end of installer for JAWS scripts by Brian
+  Hartgen or Window-Eyes scripts by Jeff Bishop.</p>
+
+  <p>McTwit 1.9 on June 8, 2009</p>
+
+  <p>Fixed the Twitter account name not being updated in the McTwit
+  window title after creating a new configuration. Fixed the -trends
+  command not working if a junk filter is set. Fixed the Extra command
+  not treating the account holder as the selected user if no items are
+  in the list.</p>
+
+  <p>Enhanced the McTwit installation so there is another way to load
+  the program: enter either McTwit.exe or just McTwit in the Windows
+  Start/Run dialog. Added more links in the documentation to audio
+  presentations about Twitter.</p>
+
+  <p>McTwit 1.9 on June 4, 2009</p>
+
+  <p>Fixed McTwit window being activated after auto check for combined
+  messages. Fixed Twitter authorization command not being re-issued
+  after switching to another McTwit configuration file. Added Elevate
+  shortcut to McTwit program group within the Windows Start Menu, so
+  McTwit may be elevated without running the program.</p>
+
+  <p>McTwit 1.9 on June 3, 2009</p>
+
+  <p>Added the Create and Switch subchoices to the Configure command.
+  The screen name of the Twitter account holder is now shown in the
+  title of the main dialog. Added more Twitter-related web sites for
+  the Go command, and made McTwit remember the previous choice. Added
+  an Email subchoice to the Utilities command.</p>
+
+  <p>McTwit 1.8 on June 1, 2009</p>
+
+  <p>Added the RelativeTime configuration option. Added a summary of
+  configuration settings to the documentation.</p>
+
+  <p>McTwit 1.8 on May 28, 2009</p>
+
+  <p>Fixed /search command getting only one page of results. Fixed auto
+  check not happening for combined messages. Enhanced Go command so
+  that if no items are in the list, McTwit offers over 50 Twitter
+  related URLs.</p>
+
+  <p>McTwit 1.8 on May 27, 2009<br>
+  The configuration dialog includes settings that also have quick
+  hotkeys, such as 1other, 4get, and Boundary. Other settings, changed
+  less often, are also included such as SoundFile, User, and Password.
+  A summary of the setting with focus appears on the status line.</p>
+
+  <p>The CombinedProcessing setting specifies which commands are used
+  to gather such messages: Direct, Replies, and/or New. The value of
+  the setting may include three characters, each pertaining to one of
+  these commands. The initial letter of a command means that it should
+  be included in combined messages. If the letter is in upper case,
+  then its type is also spoken when navigating the list with arrow
+  keys. Otherwise, the type is not spoken, though it still appears on
+  the status line. The default value is DRN -- meaning that Direct,
+  Replies, and New commands are used and that each type is spoken.</p>
+
+  <p>The EnhancedSpeech setting determines whether a screen reader API
+  is used for targeted messages. For example, the =balance command says
+  your rate balance if a screen reader API is found. Otherwise, the
+  status line may be checked for such messages.</p>
+
+  <p>McTwit 1.7 on May 20, 2009</p>
+
+  <p>When you press the Query button, McTwit offers subchoices called
+  Priority, Rest, Input, and All. You can press Enter for the default,
+  Priority button if you have defined a regular expression for this
+  setting in the configuration dialog. For example, your expression
+  could be a list of scree names seperated by the vertical bar
+  character, e.g.,<br>
+  User1|User2|User3</p>
+
+  <p>This would filter the list so that it only contained messatges
+  that included those names (ignoring capitalization). The Rest button
+  displays the items that are not matched by that query.</p>
+
+  <p>The JunkFilter setting specifies a regular expression for
+  spam-type messages that you want to automatically exclude from being
+  displayed. Key fields of each excluded item are appended to a file
+  called Junk.txt in the McTwit data folder, one item per line. You can
+  examine this file via a subchoice of the Utilities command,
+  Alt+U.</p>
+
+  <p>The Zap command, Alt+Z, removes something according to the type of
+  item. The command deletes a tweet or direct message by you, or
+  removes a favorite message from your cache. The command also drops
+  someone as your leader, blocks someone as your follower, or removes
+  that user from your blocked list (so you may be followed again). The
+  |blocked command, Alt+Bar, displays those you have blocked.</p>
+
+  <p>The ?relationship command, Alt+Shift+Slash or Alt+Question,
+  reports whether a user is following another, and vice versa. The
+  comparison is made between the selected user, the 1other user, or
+  yourself.</p>
+
+  <p>The 7update command, Alt+7, lets you change some parts of your
+  Twitter profile, including your full name, URL, description, and
+  location.</p>
+
+  <h1><a name="A17">MT Client</a></h1>
+
+  <p><a name="A17">Also included in the McTwit distribution is a
+  console-mode, command-line client. This executable, mt.exe, is
+  located in the McTwit program folder, and may be copied to a more
+  convenient location if you prefer. The program is a Windows port of
+  the Python package called twyt by Andrew Price.</a></p>
+
+  <p>Run mt.exe at a command prompt, passing it parameters as explained
+  in the sections below.</p>
+
+  <h1><a name="A18">twyt Twyt - A Twitter client for the easily
+  distracted</a></h1><a name="A18"><br>
+  ---------------------------------------------------</a>
+
+  <p>How to use<br>
+  ------------</p>
+
+  <p>This file used to list the commands available in twyt before its
+  online help<br>
+  system became sane. This is now available by using the three handy
+  command forms:</p>
+
+  <p>twyt --help<br>
+  twyt --commands<br>
+  twyt COMMAND --help</p>
+
+  <p>Your first tweet<br>
+  ------------------</p>
+
+  <p>Here&#39;s how to tell twyt which username you want to use by
+  default:</p>
+
+  <p>twyt user set --user=yourusername ---default</p>
+
+  <p>This will prompt you for your password to save it to your profile.
+  You can<br>
+  leave it blank if you would prefer not to save your password, but
+  then you will<br>
+  be prompted for your password each time twyt needs it (which can get
+  annoying<br>
+  very soon).</p>
+
+  <p>Here&#39;s an example of the two commands you&#39;re most likely
+  to use often:</p>
+
+  <p>1. twyt tweet &quot;My first tweet&quot;\!</p>
+
+  <p>This sets &#39;My first tweet!&#39; as your Twitter status
+  message.*</p>
+
+  <p>2. twyt friendstl</p>
+
+  <p>This lists up to the last 20 status messages in your friends
+  timeline. (Your<br>
+  friends timeline is the aggregation of your status messages and
+  your<br>
+  friends&#39; status messages. The 20 limit is enforced by Twitter but
+  you can<br>
+  use the -s option to get earlier tweets. You can also use the -P
+  option to<br>
+  get the next page of status updates.)</p>
+
+  <p>* Note that in command 1 the exclamation mark needed some extra
+  escaping magic.<br>
+  This is because bash treats ! specially and even putting it inside
+  the quotes<br>
+  doesn&#39;t work.</p>
+
+  <h1><a name="A19">twyt - Command line twitter client</a></h1><a name=
+  "A19"><br>
+  SYNOPSIS<br>
+  twyt [options]<br>
+  twyt COMMAND [options] [...]<br>
+  DESCRIPTION<br>
+  This manual page documents briefly the<br>
+  twyt<br>
+  command.</a>
+
+  <p>twyt<br>
+  is a command line Twitter client which allows you to update your
+  Twitter status,<br>
+  retrieve the different timelines that Twitter offers and generally
+  keep up with<br>
+  what your friends are tweeting about.</p>
+
+  <p>Use the --help (or -h) option with any form of the command to
+  get<br>
+  some usage hints and details of accepted options.</p>
+
+  <p>Use the --version option with any form of the command to make twyt
+  print<br>
+  its version.<br>
+  MISC. COMMANDS</p>
+
+  <p>user [options] (set|unset)<br>
+  allows you to save your account details in twyt&#39;s config file so
+  that you don&#39;t<br>
+  need to enter your password when running twyt commands which
+  require<br>
+  authentication. You can set many accounts and then choose one as the
+  default<br>
+  using the -u (or --user) and -d (or --default) options.<br>
+  The -l (--list) option makes twyt list your saved accounts.</p>
+
+  <p>namecache [options]<br>
+  Access and manipulate the name cache. This can be used in, for
+  example, tab<br>
+  completion scripts.<br>
+  STATUS MESSAGE COMMANDS</p>
+
+  <p>tweet [options] MESSAGE...<br>
+  sends a tweet to Twitter. In other words it updates your twitter
+  status to<br>
+  MESSAGE.</p>
+
+  <p>MESSAGE can also be supplied on stdin, i.e. using pipes or
+  redirection.<br>
+  In this case, the MESSAGE argument is ignored and stdin is used
+  in<br>
+  preference.</p>
+
+  <p>delete [options] ID<br>
+  deletes the status message matching the numerical ID.</p>
+
+  <p>publictl [options]<br>
+  shows new status messages (max 20) in the public timeline.</p>
+
+  <p>friendstl [options]<br>
+  shows new status messages (max 20) in your friends timeline.</p>
+
+  <p>usertl [options] [USERNAME]<br>
+  shows your, or another person&#39;s, timeline.</p>
+
+  <p>replies [options]<br>
+  lists statuses which are replies to you (statuses with @yourusername
+  in them)</p>
+
+  <p>show ID<br>
+  shows a single status message whose id matches ID.<br>
+  DIRECT MESSAGE COMMANDS</p>
+
+  <p>direct [options] RECIPIENT MESSAGE...<br>
+  sends a direct message to RECIPIENT.</p>
+
+  <p>directtl [options]<br>
+  shows up to 20 direct messages sent to you.</p>
+
+  <p>directsent [options]<br>
+  shows up to 20 direct messages sent by you.</p>
+
+  <p>directdel [options] ID<br>
+  deletes a direct message that was sent to you. The directtl command
+  is handy for finding out IDs.</p>
+
+  <p>AUTHOR<br>
+  twyt is maintained by Andrew Price
+  &lt;andy@andrewprice.me.uk&gt;.</p>
+
+  <p><br>
+  Usage: mctwit COMMAND [options] [args]</p>
+
+  <p>Available commands:<br>
+  block Blocks a user specified by ID (numerical ID or screen name)<br>
+  delete Deletes a tweet by ID<br>
+  direct Sends a direct message to another user<br>
+  directdel Delete a direct message which was sent to you<br>
+  directsent Prints the 20 last direct messages sent by you<br>
+  directtl Prints the 20 last direct messages sent to you<br>
+  friendstl Returns 20 most recent statuses in your friends
+  timeline<br>
+  namecache Access and manipulate the username cache.<br>
+  publictl Shows the 20 most recent statuses in Twitter&#39;s public
+  timeline<br>
+  replies Lists statuses which are replies to you (statuses with
+  @yourusername in them)<br>
+  show Show a single status message by ID<br>
+  sing Similar to &#39;tweet&#39;, wraps the status in musical
+  notes<br>
+  tweet Updates the authenticating user&#39;s Twitter status<br>
+  unblock Unblocks a user specified by ID (numerical ID or screen
+  name)<br>
+  user Get and set Twyt user options, e.g. remembered passwords and
+  Twitter usernames<br>
+  usertl Show your timeline, or USERNAME&#39;s timeline</p>
+
+  <p>For command-specific help, use mctwit COMMAND --help</p>
+
+  <p>Usage: mctwit block [options] ID</p>
+
+  <p>Blocks a user specified by ID (numerical ID or screen name)</p>
+
+  <p>Usage: mctwit delete [options] ID</p>
+
+  <p>Deletes a tweet by ID</p>
+
+  <p>Usage: mctwit direct [options] RECIPIENT MESSAGE...</p>
+
+  <p>Sends a direct message to another user</p>
+
+  <p>Usage: mctwit directdel [options] ID</p>
+
+  <p>Delete a direct message which was sent to you</p>
+
+  <p>Usage: mctwit directtl [options]</p>
+
+  <p>Prints the 20 last direct messages sent to you</p>
+
+  <p>Options:</p>
+
+  <p>-s SINCE, --since=SINCE<br>
+  The date or ID of a message to list direct messages<br>
+  from.<br>
+  -P PAGE, --page=PAGE Lists the PAGEth page of direct messages
+  (default 1)<br>
+  Usage: mctwit directsent [options]</p>
+
+  <p>Prints the 20 last direct messages sent by you</p>
+
+  <p>Options:</p>
+
+  <p>-s SINCE, --since=SINCE<br>
+  The date or ID of a message to list direct messages<br>
+  from.<br>
+  -P PAGE, --page=PAGE Lists the PAGEth page of direct messages
+  (default 1)</p>
+
+  <p>Usage: mctwit friendstl [options]</p>
+
+  <p>Returns 20 most recent statuses in your friends timeline</p>
+
+  <p>Options:</p>
+
+  <p>-s SINCE, --since=SINCE<br>
+  The date or ID of a message to list status messages<br>
+  from.<br>
+  -P PAGE, --page=PAGE Lists the PAGEth page of status updates</p>
+
+  <p>Usage: mctwit namecache [options]</p>
+
+  <p>Access and manipulate the username cache.</p>
+
+  <p>Options:<br>
+  -c, --clear Clear the name cache.<br>
+  -v, --verbose Lists real names along with user names.<br>
+  -@, --at Prepend usernames with &#39;@&#39;.</p>
+
+  <p>Usage: mctwit publictl [options]</p>
+
+  <p>Shows the 20 most recent statuses in Twitter&#39;s public
+  timeline</p>
+
+  <p>Usage: mctwit replies [options]</p>
+
+  <p>Lists statuses which are replies to you (statuses with
+  @yourusername in them)</p>
+
+  <p>Options:</p>
+
+  <p>-s SINCE, --since=SINCE<br>
+  The date or ID to list replies from.<br>
+  -P PAGE, --page=PAGE Shows the PAGEth page of replies.</p>
+
+  <p>Usage: mctwit show ID</p>
+
+  <p>Show a single status message by ID</p>
+
+  <p>Usage: mctwit sing [options] message...</p>
+
+  <p>Similar to &#39;tweet&#39;, wraps the status in musical notes</p>
+
+  <p>Options:</p>
+
+  <p>-r ID, --replyto=ID Explicitly sets the ID of the status message
+  to reply<br>
+  to.</p>
+
+  <p>Usage: mctwit tweet [options] message...</p>
+
+  <p>Updates the authenticating user&#39;s Twitter status</p>
+
+  <p>Options:</p>
+
+  <p>-r ID, --replyto=ID Explicitly sets the ID of the status message
+  to reply<br>
+  to.</p>
+
+  <p>Usage: mctwit unblock [options] ID</p>
+
+  <p>Unblocks a user specified by ID (numerical ID or screen name)</p>
+
+  <p>Usage: mctwit user [options] (set|unset)</p>
+
+  <p>Get and set Twyt user options, e.g. remembered passwords and
+  Twitter usernames</p>
+
+  <p>Options:<br>
+  -u USER, --user=USER Specify a Twitter username.<br>
+  -p PASS, --pass=PASS Specify a password.<br>
+  -l, --list Shows all stored usernames.<br>
+  -d, --default Set the given username as default.</p>
+
+  <p>Usage: mctwit usertl [options] [USERNAME]</p>
+
+  <p>Show your timeline, or USERNAME&#39;s timeline</p>
+
+  <p>Options:</p>
+
+  <p>-s SINCE, --since=SINCE<br>
+  The date or ID to list statuses from.<br>
+  -P PAGE, --page=PAGE Lists the PAGEth page of status updates<br>
+  -c COUNT, --count=COUNT<br>
+  The number of statuses to show, max 20</p>
+
+  <h1><a name="A21">Bits of the twitter API that have been implemented
+  and bits that need implementing in twitter.py</a></h1><a name=
+  "A21"><br>
+  -----------------------------------------------------------------------</a>
+
+  <p>o See http://apiwiki.Twitter.com/REST+API+Documentation</p>
+
+  <p>o API methods are wrapped in the Twitter class in twitter.py. In
+  order to implement<br>
+  a new one, use a naming scheme such as status_public_timeline or
+  friendship_create<br>
+  for the method name. The implementing method should accept arguments
+  which mirror<br>
+  the arguments required in the API docs.</p>
+
+  <p>o Status Methods<br>
+  public_timeline Done<br>
+  friends_timeline Done<br>
+  user_timeline Done<br>
+  show Done<br>
+  update Done<br>
+  replies Done<br>
+  destroy Done</p>
+
+  <p>o User Methods<br>
+  friends Done<br>
+  followers Done<br>
+  show Done</p>
+
+  <p>o Direct Message Methods<br>
+  direct_messages Done<br>
+  sent Done<br>
+  new Done<br>
+  destroy Done</p>
+
+  <p>o Friendship Methods<br>
+  create Done<br>
+  destroy Done<br>
+  exists Done</p>
+
+  <p>o Social Graph Methods<br>
+  ids (friends)<br>
+  ids (followers)</p>
+
+  <p>o Account Methods<br>
+  verify_credentials<br>
+  end_session<br>
+  update_location<br>
+  update_delivery_device<br>
+  update_profile_colors<br>
+  update_profile_image<br>
+  update_profile_background_image<br>
+  rate_limit_status<br>
+  update_profile</p>
+
+  <p>o Favorite Methods<br>
+  favorites<br>
+  create<br>
+  destroy</p>
+
+  <p>o Notification Methods<br>
+  follow<br>
+  leave</p>
+
+  <p>o Block Methods<br>
+  create Done<br>
+  destroy Done</p>
+
+  <p>o Help Methods<br>
+  test<br>
+  downtime_schedule</p>
+
+  <h1><a name="A22">How to install twyt</a></h1><a name="A22"><br>
+  -----------------------</a>
+
+  <p>o Dependencies<br>
+  - python &gt;= 2.5 (perhaps earlier, haven&#39;t tested yet)<br>
+  - simplejson</p>
+
+  <p>o Intro<br>
+  twyt uses distutils for its standard installation procedure so the
+  setup.py<br>
+  script provides installation routines. Note that it doesn&#39;t
+  provide<br>
+  uninstallation routines. If you require uninstallation and upgrade
+  handling,<br>
+  that&#39;s what package managers are for. Consider using one.</p>
+
+  <p>o Installation<br>
+  To install twyt to the default place on your system, run as root:</p>
+
+  <p>./setup.py install</p>
+
+  <p>If you wish to install it to a different root or prefix (e.g.<br>
+  --prefix=/usr/local) see ./setup.py install --help for options.</p>
+
+  <h1><a name="A23">How to use the twyt Python module</a></h1><a name=
+  "A23"><br>
+  -------------------------------------</a>
+
+  <p>o This document is written for developers who are interested in
+  using the twyt<br>
+  Python module for developing Twitter applications. If you only wish
+  to use<br>
+  the twyt commandline program, consult the README and the twyt man
+  page for<br>
+  further information.</p>
+
+  <p>o The Twitter API functions are encapsulated in the
+  twitter.Twitter class. This<br>
+  is really all you need to start using the basics of twyt but other
+  modules<br>
+  and classes are provided to allow you to make sense of the data
+  returned from<br>
+  Twitter. Here we briefly describe how to post a status message,
+  delete it and<br>
+  then list the public timeline:</p>
+
+  <p>from twyt import twitter, data</p>
+
+  <p>t = twitter.Twitter()<br>
+  t.set_auth(&quot;username&quot;, &quot;password&quot;)</p>
+
+  <p>return_val = t.status_update(&quot;Testing 123&quot;)</p>
+
+  <p>The above snippet instantiates a Twitter object and then tells it
+  the user&#39;s<br>
+  Twitter user name and password. It then calls the Twitter
+  object&#39;s<br>
+  status_update() method to send the new status message - in this
+  example<br>
+  &quot;Testing 123&quot; - to Twitter. That&#39;s how simple it is to
+  update your Twitter<br>
+  status with twyt! We continue...</p>
+
+  <p>s = data.Status()<br>
+  s.load_json(return_val)</p>
+
+  <p>print s</p>
+
+  <p>t.status_destroy(s.id)</p>
+
+  <p>This snippet shows how to use a data.Status() object to make sense
+  of the<br>
+  data that Twitter returns when we post our new status message. Once
+  the<br>
+  returned data (return_val) is loaded into the Status object s, the
+  Status<br>
+  object represents the status message returned. `print s&#39; prints a
+  string<br>
+  representation of the status message (see docs for the format). We
+  then<br>
+  decide our status message was boring and call status_destroy() on its
+  ID to<br>
+  tell Twitter to delete the status message. That&#39;s about all you
+  need to get<br>
+  started. See the pydocs in twitter.py (import twyt.twitter;
+  help(twitter))<br>
+  to see the rest of the Twitter API functions you can call.</p>
+
+  <p>o That&#39;s about as simple as it gets. The world is now your
+  oyster. Have fun!</p>
+
+  <h1><a name="A24">Help on module twyt.twitter in
+  twyt:</a></h1><a name="A24"><br>
+  NAME<br>
+  twyt.twitter - Provides a simple interface to the Twitter API<br>
+  FILE<br>
+  c:\python25\lib\site-packages\twyt\twitter.py<br>
+  CLASSES<br>
+  exceptions.Exception(exceptions.BaseException)<br>
+  TwitterException<br>
+  TwitterAuthException<br>
+  Twitter<br>
+  class Twitter<br>
+  Provides a simple interface to the Twitter API</a>
+
+  <p>Methods defined here:</p>
+
+  <p>__init__(self)<br>
+  Initialise a Twitter API interface</p>
+
+  <p>block_create(self, id=None)<br>
+  Blocks the user specified in the ID parameter as the<br>
+  | authenticating user. Returns the blocked user when successful.</p>
+
+  <p>block_destroy(self, id=None)<br>
+  Un-blocks the user specified in the ID parameter as the<br>
+  authenticating user. Returns the un-blocked user when<br>
+  successful.</p>
+
+  <p>direct_destroy(self, id)<br>
+  Destroys the direct message specified in the required ID<br>
+  parameter. The authenticating user must be the recipient of the<br>
+  specified direct message.</p>
+
+  <p>direct_messages(self, since=&#39;&#39;, since_id=&#39;&#39;,
+  page=None)<br>
+  Returns a list of the 20 most recent direct messages sent to the<br>
+  authenticating user.</p>
+
+  <p>direct_new(self, user, text)<br>
+  Sends a new direct message to the specified user from the<br>
+  authenticating user. Requires both the user and text<br>
+  parameters.</p>
+
+  <p>direct_sent(self, since=&#39;&#39;, since_id=&#39;&#39;,
+  page=None)<br>
+  Returns a list of the 20 most recent direct messages sent by the<br>
+  authenticating user.<br>
+  friendship_create(self, id, follow=False)<br>
+  Befriends the user specified in the ID parameter as the<br>
+  authenticating user. Returns the befriended user when<br>
+  successful. Returns a string describing the failure condition<br>
+  when unsuccessful. If follow is True, notifications will be<br>
+  explicitly turned on for this user.</p>
+
+  <p>friendship_destroy(self, id)<br>
+  Discontinues friendship with the user specified in the ID<br>
+  parameter as the authenticating user. Returns the un-friended<br>
+  user when successful. Returns a string describing the failure<br>
+  condition when unsuccessful.</p>
+
+  <p>friendship_exists(self, user_a, user_b)<br>
+  Tests if a friendship exists between two users. Returns True or<br>
+  False.</p>
+
+  <p>get(self, data, handler, doauth=False)<br>
+  Sends a GET request to the given remote handler. The data<br>
+  argument must be a list of pairs of strings.</p>
+
+  <p>post(self, data, handler)<br>
+  Sends a POST request to the given remote handler. The data<br>
+  | argument must be a list of pairs of strings.</p>
+
+  <p>set_auth(self, user, pwd)<br>
+  Set the user&#39;s Twitter credentials</p>
+
+  <p>set_user_agent(self, agent)<br>
+  Sets the user agent which is sent to Twitter in the<br>
+  X-Twitter-Client header</p>
+
+  <p>status_destroy(self, id)<br>
+  Destroys the status specified by the required ID parameter.<br>
+  The authenticating user must be the author of the specified<br>
+  status.</p>
+
+  <p>status_friends_timeline(self, since=&#39;&#39;,
+  since_id=&#39;&#39;, page=1)<br>
+  Returns the 20 most recent statuses posted in the last 24<br>
+  hours from the authenticating user and that user&#39;s friends.</p>
+
+  <p>status_public_timeline(self)<br>
+  Returns the 20 most recent statuses from non-protected users<br>
+  who have set a custom user icon. Does not require authentication.</p>
+
+  <p>status_replies(self, page=None, since=&#39;&#39;,
+  since_id=None)<br>
+  Returns the 20 most recent replies (status updates prefixed with<br>
+  | @username posted by users who are friends with the user being<br>
+  replied to). The page argument gets the Nth 20 replies.</p>
+
+  <p>status_show(self, id)<br>
+  Returns a single status, specified by the id parameter.</p>
+
+  <p>status_update(self, msg=&#39;&#39;, in_reply_to=None)<br>
+  Updates the user&#39;s status on twitter, otherwise known as<br>
+  tweeting. in_reply_to (optional) explicitly tells Twitter which<br>
+  status ID this message is a reply to.</p>
+
+  <p>status_user_timeline(self, id=&#39;&#39;, count=20,
+  since=&#39;&#39;, since_id=None, pag<br>
+  e=None)<br>
+  Returns the 20 (or count) most recent statuses posted by the<br>
+  authenticating user. It&#39;s also possible to request another<br>
+  user&#39;s timeline using id.</p>
+
+  <p>user_followers(self, id=None, page=None)<br>
+  Returns the authenticating user&#39;s followers, each with
+  current<br>
+  status. If id is given, returns the followers of the user<br>
+  matching id (screen name or user id).</p>
+
+  <p>user_friends(self, id=None, page=None, since=&#39;&#39;)<br>
+  Returns up to 100 of the authenticating user&#39;s friends who
+  have<br>
+  | most recently updated, each with current status inline.
+  It&#39;s<br>
+  also possible to request another user&#39;s recent friends list
+  via<br>
+  the id parameter.</p>
+
+  <p>user_show(self, id=&#39;&#39;, email=&#39;&#39;)<br>
+  Returns extended information of a given user, specified by ID or<br>
+  screen name with the id parameter. This information includes<br>
+  design settings, so third party developers can theme their<br>
+  widgets according to a given user&#39;s preferences. The id<br>
+  parameter should be the ID or username of a user.<br>
+  class TwitterAuthException(TwitterException)<br>
+  An exception to raise when Twitter auth fails</p>
+
+  <p>Method resolution order:<br>
+  TwitterAuthException<br>
+  TwitterException<br>
+  exceptions.Exception<br>
+  exceptions.BaseException<br>
+  __builtin__.object</p>
+
+  <h1><a name="A25">Blog of Andrew Price</a></h1>
+
+  <p><a name="A25">BlogSubstance( About, Web log, Projects ).<br>
+  Web Log: Categories<br>
+  Page 1 of 1: First Prev Next Last<br>
+  Web Log - Twyt<br>
+  Twyt 0.9.1 - Under The Same Stars<br>
+  By Andrew Price, 2009-02-17 22:01:50 in Twyt. Leave a comment
+  (Permalink)</a></p>
+
+  <p>Twyt 0.9.1 has been released and is available to download from the
+  usual place.<br>
+  This release cycle has been pushed along by suggestions, patches and
+  testing<br>
+  from users of the twyt command line client, so the twyt Twitter API
+  module has<br>
+  only undergone some tweaks and just a few additions to the set of
+  supported API<br>
+  methods.<br>
+  Changes to the twyt client include:<br>
+  A &#39;namecache&#39; subcommand, intended for making tab completion
+  scripts more<br>
+  useful<br>
+  Better support for using twyt in pipelines (you can now pipe messages
+  into<br>
+  &#39;twyt tweet&#39;)<br>
+  Now prints screen names instead of real names (by popular demand)<br>
+  A &#39;sing&#39; subcommand (it&#39;s silly, but it gets used)<br>
+  Better non-ASCII character handling<br>
+  The #twyt hashtag is getting used quite regularly now, but for bug
+  reports and<br>
+  patches please stick to good, old-fashioned email.<br>
+  Twyt 0.9.0 - Flowers On The Ceiling<br>
+  By Andrew Price, 2009-01-04 09:20:12 in Twyt. Leave a comment
+  (Permalink)</p>
+
+  <p>Twyt 0.9.0 has been released and is available to download from the
+  usual place.<br>
+  The python-twyt packages in Debian and Fedora will be updated
+  shortly.<br>
+  This release incorporates lots of little fixes, and updates which
+  were required<br>
+  to keep up with changes to the Twitter API. Scripts which import
+  previous<br>
+  versions of twyt may need updating.<br>
+  The accompanying command line client, twyt, has also been improved.
+  In<br>
+  particular it has better support for multiple Twitter accounts and
+  allows you to<br>
+  flag one username as the default. It also now uses simplejson to
+  store user<br>
+  configuration so the .ini-style config files generated with older
+  versions of<br>
+  twyt will be ignored (apologies for the inconvenience, to the three
+  people who<br>
+  use it).<br>
+  Note that the number of Twitter API methods which twyt supports has
+  not<br>
+  increased - I&#39;ll get around to adding support for more of them
+  next time I&#39;m in<br>
+  the mood. Meanwhile, if you&#39;re a Python coder and you&#39;ve got
+  nothing better to<br>
+  do, feel free to read the APITODO file to see what&#39;s missing and
+  email me a<br>
+  patch, or the URL of your bzr branch. It&#39;s easy-peasy stuff.<br>
+  Twyt 0.8.5 - Dancing Like Astley<br>
+  By Andrew Price, 2008-05-18 00:44:09 in Twyt. Leave a comment
+  (Permalink)<br>
+  Twyt 0.8.5 has been unleashed. Twyt is a python Twitter API library
+  and<br>
+  accompanying command line Twitter client.<br>
+  This version improves greatly on the previous command line interface
+  with added<br>
+  --help for each subcommand. The client code has been rejigged to use
+  Python&#39;s<br>
+  optparse making it more scalable and flexible than before. It also
+  has better<br>
+  local timezone and DST support. Here&#39;s a quick example:<br>
+  andy@plato:~$ twyt --commands<br>
+  Usage: twyt COMMAND [options] [args]</p>
+
+  <p>Available commands:<br>
+  archive Shows 80 of your status messages ordered by date of
+  posting<br>
+  delete Deletes a tweet by ID<br>
+  direct Sends a direct message to another user<br>
+  directdel Delete a direct message which was sent to you<br>
+  directsent Prints the 20 last direct messages sent by you<br>
+  directtl Prints the 20 last direct messages sent to you<br>
+  friendstl Returns 20 most recent statuses in your (or USERNAME&#39;s)
+  friends<br>
+  timeline<br>
+  publictl Shows the 20 most recent statuses in Twitter&#39;s public
+  timeline<br>
+  replies Show the Nth page of 20 replies (messages with @yourusername
+  in<br>
+  them)<br>
+  savepass Saves your username and password for subsequent use<br>
+  show Show a single status message by ID<br>
+  tweet Updates the authenticating user&#39;s Twitter status<br>
+  usertl Show your timeline, or USERNAME&#39;s timeline</p>
+
+  <p>For command-specific help, use twyt COMMAND --help<br>
+  andy@plato:~$ twyt tweet &quot;Showing off Twyt&#39;s cool, new,
+  helpful, optparsed<br>
+  interface&quot;<br>
+  [813846209] twytdev: Showing off Twyt&#39;s cool, new, helpful,
+  optparsed<br>
+  interface (Sun May 28 00:13:00 2008 via &lt;a<br>
+  href=&quot;http://andrewprice.me.uk/projects/twyt&quot;&gt;Twyt&lt;/a&gt;)<br>
+
+  Next on the TODO list for Twyt are better support for multiple
+  Twitter accounts<br>
+  and more complete support for the rest of the API functions. A
+  handful of new<br>
+  API functions has appeared over the last few months so it&#39;ll be a
+  challenge to<br>
+  catch up. My aim is to release version 1.0 once the whole API is
+  supported in<br>
+  Twyt.<br>
+  Updated python-twyt packages will hit Debian unstable very soon and
+  Fedora as<br>
+  soon as I&#39;ve finished upgrading to Fedora 9 (modulo studying for
+  my final exams<br>
+  which start on Monday).<br>
+  Tracking Commits With Twitter And Twyt<br>
+  By Andrew Price, 2008-04-04 12:46:22 in Twyt. Leave a comment
+  (Permalink)</p>
+
+  <p>The python-twyt package provides a Twitter client API library
+  (&#39;from twyt import<br>
+  twitter&#39;) and a command line client (&#39;twyt&#39;) which uses
+  the library. One way to<br>
+  use it is to integrate twyt into a shell script to automate your
+  Twitter<br>
+  updates. Here&#39;s an example.<br>
+  Sally the software maintainer wants to let her development team keep
+  track of<br>
+  repository commits while they&#39;re away from their computers. She
+  installs<br>
+  python-twyt, sets up a Twitter account for her project and tells twyt
+  the<br>
+  username and password for that account. She then writes a shell
+  script which<br>
+  parses from the email details such as the short commit log and the
+  link to the<br>
+  commit diff in the repository&#39;s web interface and calls:<br>
+  twyt tweet &quot;$devname $shortlog $link&quot;<br>
+  Sally also sets up a procmail rule to pipe emails from her
+  project&#39;s commits<br>
+  list into her script.<br>
+  So when an email arrives from the commits list procmail triggers the
+  script,<br>
+  sending the summary to Twitter. It then gets distributed to
+  Sally&#39;s followers,<br>
+  whether they&#39;re using email, SMS or any of the other supported
+  notification<br>
+  methods. The developers (who are clearly very dedicated) smile at
+  being able to<br>
+  keep track of the project on their mobile devices while they&#39;re
+  out grocery<br>
+  shopping or in the bath.<br>
+  I&#39;m not sure if this would be a highly desirable real-world
+  application of twyt<br>
+  but it&#39;s one possibility. If anyone implements it, do let me
+  know. It&#39;s worth<br>
+  noting, however, that Twitter does have usage limits and won&#39;t
+  accept over a<br>
+  certain amount of updates per hour or send over a certain number of
+  SMS messages<br>
+  to each user per week.<br>
+  [Update: Dave Murphy has just reminded me that you can bypass the
+  whole mailing<br>
+  list stage by using the commit hooks for your code repository to
+  trigger the<br>
+  script]<br>
+  Twyt 0.8 - Coming At You Like A Buzzard<br>
+  By Andrew Price, 2008-01-27 14:01:40 in Twyt. Leave a comment
+  (Permalink)<br>
+  I&#39;ve just released Twyt 0.8. It includes added support for
+  Twitter user<br>
+  functions, better HTTP error handling, improved documentation and
+  status<br>
+  messages posted with the twyt command line client now show up as
+  &#39;from Twyt&#39;<br>
+  instead of &#39;from web&#39;. The Fedora and Debian python-twyt
+  packages will be<br>
+  updated shortly.<br>
+  [ P.S. This will be the first of my blog entries to pop up on Planet
+  Fedora, so<br>
+  hello to all you Fedorable people! ]<br>
+  Twyt (Reprise)<br>
+  By Andrew Price, 2008-01-06 17:21:10 in Twyt. Leave a comment
+  (Permalink)<br>
+  Since the majority of twyt&#39;s code is reusable I&#39;ve decided to
+  brand it as an<br>
+  alternative Twitter API Python module instead of just a command line
+  client.<br>
+  It&#39;s pretty simple to use, as exemplified by the following
+  exciting and<br>
+  contrived Python session:<br>
+  &gt;&gt;&gt; from twyt import twitter, data<br>
+  &gt;&gt;&gt; t = twitter.Twitter()<br>
+  &gt;&gt;&gt; t.set_auth(&quot;username&quot;,
+  &quot;password&quot;)<br>
+  &gt;&gt;&gt; return_val = t.status_update(&quot;Test&quot;)<br>
+  &gt;&gt;&gt; s = data.Status()<br>
+  &gt;&gt;&gt; s.load_json(return_val)<br>
+  &gt;&gt;&gt; print s<br>
+  [568644162] Andy Price: Test (Sun Jan 06 16:10:53 +0000 2008 via
+  web)<br>
+  &gt;&gt;&gt; print s.id<br>
+  568644162<br>
+  &gt;&gt;&gt; t.status_destroy(s.id)<br>
+  A quick run through the code: set_auth() tells the Twitter object
+  your username<br>
+  and password. Then status_update() sends your status message to
+  Twitter and<br>
+  return_val is set to the JSON formatted string that Twitter sends
+  back. We then<br>
+  load the JSON string into a Status object which lets us access the
+  returned data<br>
+  (the details of the new status message) conveniently. We then pass
+  the id of the<br>
+  new status message into status_destroy() which tells Twitter to
+  delete the<br>
+  status message, because it&#39;s boring.<br>
+  The docs in the classes are pretty good so help() should be your
+  friend. Go<br>
+  forth and write super-shiny twyt-based applications.<br>
+  Twyt is now in Fedora Rawhide and Debian Unstable, so it should
+  propagate into<br>
+  Ubuntu Hardy Heron (universe) soon. Those of you brave enough to run
+  Rawhide,<br>
+  Unstable and Hardy can install twyt using &#39;yum install
+  python-twyt&#39; or &#39;apt-get<br>
+  install python-twyt&#39; respectively. Alternatively, just grab the
+  latest tarball.<br>
+  Twyt - A Command Line Twitter Client<br>
+  By Andrew Price, 2007-12-27 05:53:53 in Twyt. Leave a comment
+  (Permalink)<br>
+  Allow me to introduce my new little python program named Twyt
+  (randomly chosen<br>
+  but could be backronymed to &quot;That&#39;s what you
+  think&quot;).<br>
+  Twyt allows you to post twitter messages, delete them, view your
+  friends&#39; latest<br>
+  messages and view other various twitter &quot;timelines&quot; from
+  the command line. It&#39;s<br>
+  very young and really only does enough stuff to keep me happy so it
+  might be<br>
+  lacking in features that others may desire. Patches welcome, as
+  usual.<br>
+  I wrote twyt a couple of weeks ago after I couldn&#39;t find a
+  twitter client that<br>
+  met my standards and stumbled across the Twitter API docs. If you
+  prefer GUI<br>
+  clients, it shouldn&#39;t be too hard to import twyt&#39;s twitter.py
+  (or commands.py<br>
+  for that matter) and write a nice, shiny front-end for it. I&#39;ve
+  tried to<br>
+  document it quite well for that purpose - see the GUIHOWTO file for a
+  possible<br>
+  example. Twyt uses the JSON interfaces to the Twitter functions and
+  depends on<br>
+  the simplejson python library.<br>
+  Have fun.<br>
+  Page 1 of 1: First Prev Next Last<br>
+  [ Most content © Andrew Price | Written in Vim | Validate my: XHTML /
+  CSS ]</p>
+
+  <h1><a name="A26">Twyt Licence</a></h1>
+
+  <p><a name="A26"># Copyright (c) 2007-2009 Andrew Price<br>
+  All rights reserved.</a></p>
+
+  <p>Redistribution and use in source and binary forms, with or
+  without<br>
+  modification, are permitted provided that the following
+  conditions<br>
+  are met:<br>
+  1. Redistributions of source code must retain the above copyright<br>
+  notice, this list of conditions and the following disclaimer.<br>
+  2. Redistributions in binary form must reproduce the above
+  copyright<br>
+  notice, this list of conditions and the following disclaimer in
+  the<br>
+  documentation and/or other materials provided with the
+  distribution.<br>
+  3. The name of the author may not be used to endorse or promote
+  products<br>
+  derived from this software without specific prior written
+  permission.</p>
+
+  <p>THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY
+  EXPRESS OR<br>
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  WARRANTIES<br>
+  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  DISCLAIMED.<br>
+  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,<br>
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT<br>
+  NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+  USE,<br>
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+  ANY<br>
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+  TORT<br>
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF<br>
+  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+  <p>End of Document</p>
+</body>
+</html>
